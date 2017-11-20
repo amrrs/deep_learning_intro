@@ -33,6 +33,10 @@ model %>%
   layer_dense(units = 10) %>% 
   layer_activation(activation = 'softmax')
 
+#print model summary
+
+model %>% summary()
+
 #compiling the defined model with metric = accuracy and optimiser as adam.
 model %>% compile(
   loss = 'categorical_crossentropy',
